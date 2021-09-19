@@ -1,5 +1,5 @@
 import "./App.css"
-import Appbar from "./components/Appbar"
+//import Appbar from "./components/Appbar"
 import Home from "./pages/Home"
 import PathFinding from "./pages/PathFinding"
 import React from "react"

@@ -1,7 +1,7 @@
 import React from "react"
 
-const Page1 = () => {
-  return <div>Welcome to Page1</div>
+const ConnectedComponents = () => {
+  return <div>Welcome to ConnectedComponents</div>
 }
 
-export default Page1
+export default ConnectedComponents

@@ -8,14 +8,13 @@ import Sigma from "sigma"
 const GraphDisplay = () => {
   const GraphDisplayStyle = {
     height: "500px",
-		width: "500px"
+    width: "500px",
   }
 
   const graphRef = useRef(null)
 
   useEffect(() => {
-    const graph = erdosRenyi(UndirectedGraph, { order: 10
-			, probability: 0.3 })
+    const graph = erdosRenyi(UndirectedGraph, { order: 10, probability: 0.3 })
     randomLayout.assign(graph)
 
     graph.nodes().forEach(node => {
