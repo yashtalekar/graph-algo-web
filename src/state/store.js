@@ -1,7 +1,7 @@
 import { createStore } from "easy-peasy"
-import model from "./model"
+import model, { storeModel } from "./model"
 
-const store = createStore(model)
+const store = createStore < storeModel > model
 
 // Set up hot reloading
 // https://easy-peasy.vercel.app/docs/recipes/hot-reloading.html

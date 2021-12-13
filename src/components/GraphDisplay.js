@@ -14,20 +14,20 @@ const GraphDisplay = () => {
 
   const graphRef = useRef(null)
 
-  // const graph = erdosRenyi(UndirectedGraph, { order: 10, probability: 0.3 })
-  // randomLayout.assign(graph)
+  const graph = erdosRenyi(UndirectedGraph, { order: 10, probability: 0.3 })
+  randomLayout.assign(graph)
 
-  // graph.nodes().forEach((node) => {
-  //   graph.mergeNodeAttributes(node, {
-  //     label: "test",
-  //     size: Math.max(4, Math.random() * 10),
-  //   })
-  // })
+  graph.nodes().forEach(node => {
+    graph.mergeNodeAttributes(node, {
+      label: "test",
+      size: Math.max(4, Math.random() * 10),
+    })
+  })
 
-  // const addGraphData = useStoreActions((actions) => actions.addGraphData)
-  // addGraphData(graph)
+  const addGraphData = useStoreActions(actions => actions.addGraphData)
+  addGraphData(graph)
 
-  const graph = useStoreState(state => state.graphData)
+  // const graph = useStoreState(state => state.graphData)
   console.log("graph State: ")
   console.log(graph)
 
@@ -41,8 +41,8 @@ const GraphDisplay = () => {
     //     size: Math.max(4, Math.random() * 10),
     //   })
     // })
+    //const sigmaGraph = new Sigma(graph, graphRef.current)
 
-    const sigmaGraph = new Sigma(graph, graphRef.current)
     // For now to make sure store is working correctly, store the graph
     // generated here in the store.
     // Later, we can move graph generation to its own file.
